@@ -1,39 +1,40 @@
-public class Main {
+public class Main{
     public static void main(String[] args){
-        Laptop obj1 = new Laptop();
-        obj1.brand = "Asus";
-        obj1.storage = 512;
-        obj1.memory = 12;
-        obj1.dimension = 16;
-        obj1.model = "TUF Gaming 16";
-        obj1.condition = "New";
-        obj1.price = 42000;
+        Laptop laptop1 = new Laptop();
+        //use dot notation to access object's property
+        laptop1.brand = "Asus";
+        laptop1.model = "TUF Gaming 16";
+        laptop1.condition = "New";
+        laptop1.dimension = 15.6;
+        laptop1.storage = 512;
+        laptop1.memory = 12;
+        laptop1.price = 42000;
 
-        var obj2 = new Laptop();
-        obj2.brand = "Dell";
-        obj2.model = "Latitude 7390";
-        obj2.memory = 8;
-        obj2.storage = 256;
-        obj2.dimension = 13.3;
-        obj2.condition = "Old";
-        obj2.price = 35000;
+        laptop1.print();
 
-        obj1.printDetails();
-        obj2.printDetails();
+        var laptop2 = new Laptop();
+        laptop2.brand = "Dell";
+        laptop2.model = "Latitude 7390";
+        laptop2.condition = "Old";
+        laptop2.dimension = 13.3;
+        laptop2.storage = 256;
+        laptop2.memory = 8;
+        laptop2.price = 35000;
 
+        System.out.println();
+        laptop2.print();
 
-        Student student1 = new Student();
-        student1.firstName = "Ira";
-        student1.lastName = "Palabay";
+        Student s1 = new Student();
+        s1.firstName = "Maryx";
+        s1.lastName = "Corpuz";
 
-        Student student2 = new Student();
-        student2.firstName = "Kian";
-        student2.lastName = "Estigoy";
+        Student s2 = new Student();
+        s2.firstName = "Eliza";
+        s2.lastName = "Parchamento";
 
-        System.out.println(student1.getFullName());
-        System.out.println(student2.getFullName());
+        System.out.println(s1.getFullName());
+        System.out.println(s2.getFullName());
+
     }
 }
-
-
 

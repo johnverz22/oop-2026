@@ -1,15 +1,14 @@
 public class Laptop{
     String brand;
     double storage;
-    double memory;
+    int memory;
     double dimension;
     String model;
     String condition;
     double price;
 
-    void printDetails(){
-        System.out.printf("""
-                %s %s %s
-                """, condition, brand, model);
+    void print(){
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
     }
 }
