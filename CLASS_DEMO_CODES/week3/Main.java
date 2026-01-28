@@ -1,23 +1,28 @@
 public class Main {
     public static void main(String[] args) {
-        Shop shopee = new Shop();
-        shopee.name = "Louise Sari-sari Store";
+        Shop shop = new Shop();
+        shop.name = "Co-pal Grocery Store";
 
-        Product product1 = new Product("Condensed", 71.00, 10);
-        Product product2 = new Product();
-        product2.name = "Egg";
-        product2.price = 12;
-        product2.stock = 12;
-        Product product3 = new Product("Camera lense", 15000, 1);
+        Product p1 = new Product("Fresh Milk", 100, 1);
+        Product.totalProducts++;
+        Product p2 = new Product("Coffee", 300, 5);
+        Product.totalProducts++;
+        Product p3 = new Product("Condensed Milk", 70, 20);
+        Product.totalProducts++;
 
-        shopee.productList = new Product[50];
-        shopee.productList[0] = product1;
-        shopee.productList[1] = product2;
-        shopee.productList[2] = product3;
+        shop.productList = new Product[50];
+        shop.productList[0] = p1;
+        shop.productCount++;
+        shop.productList[1] = p2;
+        shop.productCount++;
+        shop.productList[2] = p3;
+        shop.productCount++;
+        shop.addProduct(new Product("Water", 20, 100));
+        
 
+        System.out.println("Welcome to " + shop.name );
+        shop.displayProducts();
 
-        System.out.println("This are the products of " + shopee.name);
-        shopee.displayProducts();
 
     }
 }
