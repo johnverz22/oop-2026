@@ -3,6 +3,7 @@ Activity 4 Task
 
 Make Deposit, Withdraw and Exit functional.
 Make proper adjustment to BankAccount.java if necessary.
+Save data on exit.
 */
 
 import java.io.File;
@@ -58,9 +59,10 @@ public class App {
 
         */
         //OPTION 2
-        Optional<BankAccount> newSessionUser = accounts.stream().filter(b -> 
-            b.getAcctNo().equals(acctNo)
-        ).findFirst();
+        // Optional<BankAccount> newSessionUser = accounts.stream().filter(account -> {
+        //     return account.getAcctNo().equals(acctNo);
+        // } ).findFirst();
+        Optional<BankAccount> newSessionUser = accounts.stream().filter(account -> account.getAcctNo().equals(acctNo)).findFirst();
 
         if(newSessionUser.isPresent()){
             if(newSessionUser.get().isValidPin(pin)){
