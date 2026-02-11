@@ -49,7 +49,7 @@ public class BankAccount{
     
     public boolean deposit(float balance){
         if(balance > 0){
-            this.balance = balance;
+            this.balance += balance;
             return true;
         }else{
             System.out.println("Error: You cannot deposit less than 1 peso.");

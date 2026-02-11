@@ -44,9 +44,15 @@ public class App {
             
         */
 
+        /*
+            public static boolean match(param){
+                return property == param
+            }
+
+        */
         //OPTION 2
-        Optional<BankAccount> newSessionUser = accounts.stream().filter(
-            b -> b.getAcctNo().equals(acctNo)
+        Optional<BankAccount> newSessionUser = accounts.stream().filter(b -> 
+            b.getAcctNo().equals(acctNo)
         ).findFirst();
 
         if(newSessionUser.isPresent()){
@@ -59,15 +65,8 @@ public class App {
             }
         }
 
-
-
-        
-
-
-
     }
-
-
+    
     public static void beginTransaction(BankAccount account){
         System.out.println("""
             Menu
