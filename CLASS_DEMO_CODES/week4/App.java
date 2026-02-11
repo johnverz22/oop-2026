@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class App {
@@ -18,15 +19,16 @@ public class App {
         System.out.println("Enter PIN:");
         int pin = sc.nextInt();
 
-        //Check if account is existing
-        BankAccount newSessionUser = null;
+    
+        /* 
+        CHECKING IF THE ACCOUNT IS PRESENT THEN AUTHENTICATE WITH THE PIN
+        OPTION 1:
         for(BankAccount a: accounts){
             if(a.getAcctNo().equals(acctNo)){
                 newSessionUser = a; //assign to new session user if match is found
                 break;
             }
-        }
-
+        } 
         //try if account exist then check PIN
         if(newSessionUser != null){
             if(newSessionUser.getPin() == pin){
@@ -39,6 +41,27 @@ public class App {
         }else{
             System.out.println("Sorry try again...");
         }
+            
+        */
+
+        //OPTION 2
+        Optional<BankAccount> newSessionUser = accounts.stream().filter(
+            b -> b.getAcctNo().equals(acctNo)
+        ).findFirst();
+
+        if(newSessionUser.isPresent()){
+            if(newSessionUser.get().isValidPin(pin)){
+                System.out.println("Welcome...");
+                //begin transaction
+                beginTransaction(newSessionUser.get());
+            }else{
+                System.out.println("Invalid credentials...");
+            }
+        }
+
+
+
+        
 
 
 
@@ -66,7 +89,7 @@ public class App {
 
     public static void  loadAccounts(ArrayList<BankAccount> accounts){
         try(Scanner reader = new Scanner(new File("accounts.csv"))){
-            reader.nextLine();
+            reader.nextLine(); //skip the header
             while(reader.hasNextLine()){
                 String[] cols = reader.nextLine().split(",");
                 String acctNo = cols[0];
@@ -77,7 +100,7 @@ public class App {
                 BankAccount acc = new BankAccount(acctNo, pin, balance, fullName);
                 accounts.add(acc);
             }
-        }catch(FileNotFoundException e){
+        }catch(FileNotFoundException | NumberFormatException e){
             e.printStackTrace();
         }
     }
