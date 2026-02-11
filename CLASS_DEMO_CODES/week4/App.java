@@ -1,3 +1,10 @@
+/*
+Activity 4 Task
+
+Make Deposit, Withdraw and Exit functional.
+Make proper adjustment to BankAccount.java if necessary.
+*/
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -66,7 +73,7 @@ public class App {
         }
 
     }
-    
+
     public static void beginTransaction(BankAccount account){
         System.out.println("""
             Menu
