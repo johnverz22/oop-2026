@@ -20,6 +20,10 @@ public class BankAccount{
         return pin;
     }
 
+    public boolean isValidPin(int pin){
+        return this.pin == pin;
+    }
+
     public float getBalance(){
         return balance;
     }
@@ -45,12 +49,14 @@ public class BankAccount{
     
     public boolean deposit(float balance){
         if(balance > 0){
-            this.balance = balance;
+            this.balance += balance;
             return true;
         }else{
             System.out.println("Error: You cannot deposit less than 1 peso.");
             return false;
         }
+
+        
     }
 
     public void withdraw(float amount){
