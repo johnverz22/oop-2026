@@ -48,9 +48,11 @@ In your `Main` class, perform the following sequence:
 
 ## Grading Rubric (20 Points Total)
 
-| Criteria | 5 Points (Excellent) | 3-4 Points (Good) | 1-2 Points (Developing) |
-| --- | --- | --- | --- |
-| **Inheritance Logic** | Correct use of `extends` and `super()` constructor. | Used `extends` but missed `super()` or used incorrect access modifiers. | Classes are not linked or inheritance is misused. |
-| **Method Overriding** | Successfully overrode `displayStatus()` and used `super.displayStatus()`. | Overrode the method but completely replaced parent logic instead of extending it. | Did not override methods. |
-| **Encapsulation & Logic** | Conditional logic (checking `isOn`) works perfectly. | Logic works but allows for edge-case errors (e.g., negative brightness). | Logic is missing or contains syntax errors. |
-| **Execution (Main)** | All tasks in the Main class are executed and output is formatted. | Most tasks completed; minor output formatting issues. | Code does not compile or major tasks are missing. |
+**Total Points: 20** (5 Points per Category)
+
+| Criteria | 5 (Excellent) | 4 (Very Good) | 3 (Good/Developing) | 2 (Emerging) | 1 (Beginning) |
+| --- | --- | --- | --- | --- | --- |
+| **Inheritance & Constructors** | Uses `extends`. Subclass constructor correctly calls `super(brand)`. | Uses `extends`. Calls `super()` but omits the brand parameter. | Uses `extends` but manually assigns parent fields (e.g., `this.brand = brand`). | Classes are created but the `extends` keyword is missing. | Code does not compile or classes are not linked. |
+| **Method Overriding** | `displayStatus()` is overridden and includes a call to `super.displayStatus()`. | Method is overridden but logic is duplicated (no `super` call). | Method is overridden but with the wrong signature (e.g., `display()`). | Subclass has unique methods but does not override parent methods. | No attempt to override or modify parent behavior. |
+| **Encapsulation & Logic** | Fields are `private/protected`. Methods check `if(isOn)` before execution. | Logic is correct, but fields are `public` (violates encapsulation). | Logic works but allows invalid states (e.g., battery < 0 or brightness > 100). | Methods are defined but do not change object state (e.g., battery remains 100). | Logical methods are empty or contain syntax errors. |
+| **Polymorphism & Main** | Uses a `SmartDevice` array/list to store and loop through different subclasses. | Objects are stored in a list, but loop logic or output formatting is broken. | Subclasses are tested individually; no parent-type array/list is used. | Only one subclass is instantiated and tested. | `Main` class is missing or code fails to execute. |
