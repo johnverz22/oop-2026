@@ -1,4 +1,4 @@
-# Activity 9: Abstraction and the Object Class
+# Activity 10: Abstraction and the Object Class
 **Topic:** Implementing Geometric Hierarchies
 
 ## Objective
