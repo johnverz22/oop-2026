@@ -81,13 +81,12 @@ Implement a `FileHandler` to manage the saving and loading of the `ArrayList<Emp
 ></dependency>
 >```
 
-### Task 4: Interactive Menu: `PayrollSystem`
-Create a `PayrollSystem` class with a `main` method that displays a menu:
+### Task 4: Interactive Menu: `PayrollSystem` (Main Class)
+Create a `PayrollSystem` class with a `main` method that displays a menu. Note: The system should automatically **Load Records** from `employees.json` as soon as the program starts.
 1.  **Add Employee:** (Ask for type using the Enum, then collect details).
 2.  **View All Employees:** (Display records and earnings using polymorphism).
 3.  **Save Records:** (Write the current list to `employees.json`).
-4.  **Load Records:** (Read from `employees.json`).
-5.  **Exit:** (Quit).
+4.  **Exit:** (Quit).
 
 ---
 
