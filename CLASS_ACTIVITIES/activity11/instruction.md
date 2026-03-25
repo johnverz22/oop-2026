@@ -72,6 +72,15 @@ Implement a `FileHandler` to manage the saving and loading of the `ArrayList<Emp
 > Gson gson = new GsonBuilder().registerTypeAdapterFactory(adapter).create();
 > ```
 
+> To make the RuntimeTypeAdapterFactory work, add this maven dependency:
+>```xml
+><dependency>
+>    <groupId>com.google.code.gson</groupId>
+>    <artifactId>gson-extras</artifactId>
+>    <version>2.13.2-rc1</version>
+></dependency>
+>```
+
 ### Task 4: Interactive Menu: `PayrollSystem`
 Create a `PayrollSystem` class with a `main` method that displays a menu:
 1.  **Add Employee:** (Ask for type using the Enum, then collect details).
