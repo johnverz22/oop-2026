@@ -65,7 +65,7 @@ Implement a `FileHandler` to manage the saving and loading of the `ArrayList<Emp
 > **Sample Snippet for FileHandler:**
 > ```java
 > RuntimeTypeAdapterFactory<Employee> adapter = RuntimeTypeAdapterFactory
->     .of(Employee.class, "type") // "type" is the field name in JSON
+>     .of(Employee.class, "type", true) // "type" is the field name in JSON -> UPDATED: Added true to fix error on parsing the JSON which makes this value null
 >     .registerSubtype(SalariedEmployee.class, EmployeeType.SALARIED.name())
 >     .registerSubtype(HourlyEmployee.class, EmployeeType.HOURLY.name());
 >
