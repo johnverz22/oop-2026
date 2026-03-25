@@ -75,9 +75,9 @@ Implement a `FileHandler` to manage the saving and loading of the `ArrayList<Emp
 > To make the RuntimeTypeAdapterFactory work, add this maven dependency:
 >```xml
 ><dependency>
->    <groupId>com.google.code.gson</groupId>
+>    <groupId>org.danilopianini</groupId>
 >    <artifactId>gson-extras</artifactId>
->    <version>2.13.2-rc1</version>
+>    <version>3.3.0</version>
 ></dependency>
 >```
 
