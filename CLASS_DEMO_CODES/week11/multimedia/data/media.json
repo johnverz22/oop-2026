@@ -1,0 +1,18 @@
+[
+  {
+    "audioQuality": "High",
+    "type": "SONG",
+    "artist": "Ira Palabay",
+    "streamCount": 1003,
+    "title": "Hawak mo ang Beat",
+    "fileName": "hawak_mo_ang_beat.mp3"
+  },
+  {
+    "resolution": "4K",
+    "type": "VIDEO",
+    "artist": "Kaizer Palabay",
+    "streamCount": 1000002,
+    "title": "Hawak mo ang Gabi",
+    "fileName": "sample_video.mp4"
+  }
+]
