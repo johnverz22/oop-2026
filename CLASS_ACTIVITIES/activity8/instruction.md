@@ -29,9 +29,3 @@ This rubric evaluates both the structural implementation and the mathematical lo
 | **Rectangle Overlap** | `overlaps(MyRectangle2D r)` logic correctly determines if the rectangles intersect. (Typically by checking if they are *not* completely separate). | **5 pts** |
 | **Code Quality** | Proper naming conventions (camelCase), indentation, and use of `this` keyword where appropriate. | **1 pt** |
 | **Total** | | **20 pts** |
-
-### Logic Notes for Grading:
-* **Containment:** For a rectangle to contain another, the distance between centers plus half the inner width must be less than or equal to half the outer width: 
-    $|x_1 - x_2| + \frac{w_2}{2} \le \frac{w_1}{2}$ (same for height).
-* **Overlap:** Two rectangles overlap if the distance between their centers is less than the sum of their half-widths:
-    $|x_1 - x_2| < \frac{w_1 + w_2}{2}$ AND $|y_1 - y_2| < \frac{h_1 + h_2}{2}$.
