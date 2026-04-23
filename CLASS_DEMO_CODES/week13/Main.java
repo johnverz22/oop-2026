@@ -1,25 +1,22 @@
+import java.util.*;
 
-public class Main{
+public class Main {
+    public static void main(String[] args) {
+        List<Car> cars = new ArrayList<>();
 
-    public static void main(String[] args){
-        ChatPacket<String> outgoing = new ChatPacket<String>("Alice", "Hello World");
-        //--sender side
-        String rawMessage = outgoing.serialize();
-        System.out.println(rawMessage);
+        cars.add(new Car("Toyota Corolla Altis", 2005));
+        cars.add(new Car("Toyota Avanza", 2020));
+        cars.add(new Car("Tesla Model 3", 2023));
+        cars.add(new Car("Ford Mustang", 1980));
+        cars.add(new Car("Toyota Vios", 2010));
+        cars.add(new Car("Mitsubishi Montero", 2019));
+        
+        System.out.println("Before sorting: " + cars);
 
-        ChatPacket<Boolean> outgoing2 = new ChatPacket<Boolean>("John", true);
-        rawMessage = outgoing2.serialize();
-        System.out.println(rawMessage);
+        Collections.sort(cars);
 
-        //--receiver
-        ChatPacket<String> incoming = deserialize(rawMessage);
-        System.out.println(incoming.getPayload());
-    }
+        System.out.println("After sorting: " + cars);
 
-    public static ChatPacket<String> deserialize(String raw){
-        String[] parts = raw.split("\\|");
-        String sender = parts[0];
-        String message = parts[1];
-        return new ChatPacket<>(sender, message);
+
     }
 }
