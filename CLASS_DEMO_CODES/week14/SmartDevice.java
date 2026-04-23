@@ -1,8 +1,8 @@
-public interface SmartDevice{
+public interface SmartDevice {
     void performAction();
 
     default void reportStatus(){
-        System.out.println("[Status]: Device is operational.");
+        System.out.println("[Status]: Device is operational...");
     }
 
     static boolean isLowBattery(int level){
