@@ -90,15 +90,14 @@ Create a `PayrollSystem` class with a `main` method that displays a menu. Note: 
 
 ---
 
-## Quantitative Rubric (40 Points Total)
+## Grading Rubric (40 Points Total)
 
-| Criteria | Description | Points |
+| Criteria | Points | Description |
 | :--- | :--- | :--- |
-| **Abstraction Logic** | Correct use of `abstract` keyword; no instantiation of `Employee`. | 8 pts |
-| **Enum Implementation**| Correct use of `EmployeeType` enum to restrict and identify types. | 5 pts |
-| **Inheritance & Super** | Proper use of `extends` and calling `super()` in constructors. | 5 pts |
-| **Polymorphism** | Correct implementation and use of `calculateEarnings()` in the menu loop. | 7 pts |
-| **Data Persistence** | Successful implementation of JSON Save/Load with Polymorphic Adapter. | 10 pts |
-| **Interactive Menu** | Functional menu loop with proper input handling and logic. | 5 pts |
-
-**Total: 40 Points**
+| **Abstraction Logic** | **8** | Correct use of `abstract` keyword; no instantiation of `Employee`. |
+| **Enum Implementation** | **5** | Correct use of `EmployeeType` enum to restrict and identify types. |
+| **Inheritance & Super** | **5** | Proper use of `extends` and calling `super()` in constructors. |
+| **Polymorphism** | **7** | Correct implementation and use of `calculateEarnings()` in the menu loop. |
+| **Data Persistence** | **10** | Successful implementation of JSON Save/Load with Polymorphic Adapter. |
+| **Interactive Menu** | **5** | Functional menu loop with proper input handling and logic. |
+| **Total** | **40** | |

@@ -142,16 +142,13 @@ public class PrintCalendar {
 }
 ```
 
-To ensure this rubric is "AI-friendly," it uses a **structured table format** and **clear quantitative indicators**. This allows an AI (or a human instructor) to parse the requirements quickly and assign points based on discrete, objective benchmarks.
-
 ## Grading Rubric (20 Points Total)
 
-| Criteria | 4 pts (Excellent) | 2 pts (Partial) | 0 pts (Incomplete/Incorrect) |
-| :--- | :--- | :--- | :--- |
-| **Command-Line Inputs** | Program correctly uses `args[0]` and `args[1]` for month/year; includes basic error handling for missing arguments. | Program uses command-line args but crashes if they are missing or in the wrong format. | Program still uses `Scanner` or hardcoded values for input. |
-| **API Class Integration** | Correctly instantiates and uses both `Calendar` and `GregorianCalendar` to drive the logic. | Uses only one of the required classes or uses them inefficiently (e.g., redundant objects). | Does not use the Java Calendar API at all. |
-| **Logic Refactoring (Start Day)** | Uses `calendar.get(Calendar.DAY_OF_WEEK)` to find the start of the month. Manual Zeller logic is removed. | Uses API to get the date but incorrectly maps the integer value to the UI layout. | Manual `getStartDay` or `getTotalNumberOfDays` methods are still present. |
-| **Logic Refactoring (Month Info)** | Uses `getActualMaximum(Calendar.DAY_OF_MONTH)` and `getDisplayName()` for month name/length. | Uses API for one but retains manual `switch` or `isLeapYear` logic for the other. | Retains manual `getMonthName` and `getNumberOfDaysInMonth` methods. |
-| **Output & Formatting** | Calendar grid is perfectly aligned; matches original logic for spacing and line breaks. | Calendar logic is correct, but visual alignment is messy or off-center. | Output is unreadable or logically incorrect (dates under wrong days). |
-
-**Total: 20 Points**
+| Criteria | Points | Description |
+| :--- | :--- | :--- |
+| **Command-Line Inputs** | **4** | Program correctly uses `args[0]` and `args[1]` for month/year; includes basic error handling for missing arguments. |
+| **API Class Integration** | **4** | Correctly instantiates and uses both `Calendar` and `GregorianCalendar` to drive the logic. |
+| **Logic Refactoring (Start Day)** | **4** | Uses `calendar.get(Calendar.DAY_OF_WEEK)` to find the start of the month; manual `getStartDay`/`getTotalNumberOfDays` methods are removed. |
+| **Logic Refactoring (Month Info)** | **4** | Uses `getActualMaximum(Calendar.DAY_OF_MONTH)` and `getDisplayName()` for month name/length; manual `getMonthName`/`getNumberOfDaysInMonth` methods are removed. |
+| **Output & Formatting** | **4** | Calendar grid is perfectly aligned; matches original logic for spacing and line breaks. |
+| **Total** | **20** | |

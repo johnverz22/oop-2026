@@ -57,13 +57,12 @@ Create a `Main` class with a `main` method that:
 
 ---
 
-## Quantitative Rubric (20 Points Total)
+## Grading Rubric (20 Points Total)
 
-| Criteria | Description | Points |
+| Criteria | Points | Description |
 | :--- | :--- | :--- |
-| **Abstraction Implementation** | Correct use of `extends` and implementation of all abstract methods (`getArea`, `getPerimeter`). | 6 pts |
-| **Object Class Overriding** | Correct implementation of `toString()` and logic-based `equals()` in both subclasses. | 6 pts |
-| **Polymorphism & Logic** | Successful use of an array of the abstract type and correct mathematical calculations. | 4 pts |
-| **Code Structure & Style** | Proper use of constructors (`super`), encapsulation (private fields), and naming conventions. | 4 pts |
-
-**Total: 20 Points**
+| **Abstraction Implementation** | **6** | Correct use of `extends` and implementation of all abstract methods (`getArea`, `getPerimeter`). |
+| **Object Class Overriding** | **6** | Correct implementation of `toString()` and logic-based `equals()` in both subclasses. |
+| **Polymorphism & Logic** | **4** | Successful use of an array of the abstract type and correct mathematical calculations. |
+| **Code Structure & Style** | **4** | Proper use of constructors (`super`), encapsulation (private fields), and naming conventions. |
+| **Total** | **20** | |
