@@ -50,3 +50,9 @@ document.getElementById("btnequal").addEventListener("click", ()=>{
     operands = []; 
 
 });
+
+/*
+add other digits and - munus operator
+
+
+*/
