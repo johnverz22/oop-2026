@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Webdev intro with OOP</title>
+</head>
+<body>
+
+    <h1>Welcome to OOP/Web dev</h1>
+    <p>
+        Any lengthy words go here..
+        This is a paragraph tag
+
+    </p>
+    <button id="clickme">Click Me</button>
+
+    <script>
+        let x = 5;
+        console.log(x)
+        console.log(typeof x)
+
+        x = "Hello Deccy"
+        console.log(x)
+        console.log(typeof x)
+
+        let y;
+        console.log(y)
+
+        x = true
+        console.log(typeof x)
+
+        x = 5.5
+        console.log(typeof x)
+
+        if(x === "5.5"){
+            console.log("Hello")
+        }
+
+        for(z = 0; z < 1000; z++){
+            console.log(z);
+        }
+
+        b = "baboy"
+        console.log(b)
+
+        console.log(`Hello ${b}`) //back tick
+
+        const ngolors = ["mink", "mrown", "mlue", "murmle", "miolet", "red"]
+
+        for(let ngolor of ngolors)
+            console.log(ngolor)
+
+        ngolors.forEach((color)=>{console.log(color)})
+
+        function hello(){
+            console.log("Hello")
+        }
+
+        hello()
+
+        const hi = ()=>{
+            console.log("hi")
+        }
+
+        hi()
+
+        const greet = (name)=>{
+            console.log(`Hello ${name}`)
+        }
+
+        greet("hanna")
+
+        const list = [1, 2, 3, 4, 5]
+
+        //const even = list.filter((n) => { return n % 2 == 0});
+        const even = list.filter(n => n%2 == 0)
+        console.log(`even numbers are ` + even)
+
+        console.log(document)
+
+        document.body.getElementsByTagName("h1")[0].textContent = "hello joel"
+        document.getElementById("clickme").addEventListener("click", ()=>{
+            console.log("I'm clicked!");
+        });
+    </script>
+</body>
+</html>
