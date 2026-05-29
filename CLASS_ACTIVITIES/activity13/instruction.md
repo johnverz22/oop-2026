@@ -59,12 +59,12 @@ In your `main` method, perform the following simulations:
 
 ---
 
-## 📝 Grading Rubric
+## Grading Rubric (20 Points Total)
 
-| Criteria | 5 Points (Exemplary) | 3-4 Points (Developing) | 0-2 Points (Beginning) | Score |
+| Criteria | 5 (Exemplary) | 3-4 (Developing) | 0-2 (Beginning) | Score |
 | :--- | :--- | :--- | :--- | :--- |
 | **Generic Class Definition** | Correct use of `<T>` placeholder in both `Result` and `Repository`. No raw types used. | `<T>` is used but missing in some parts of the class (e.g., return types). | Classes are not generic or use `Object` instead of `<T>`. | /5 |
 | **Repository Logic** | Implementation of `add`, `get`, and `size` is correct and type-safe. | Repository works but uses hardcoded types or has logic errors. | Repository is missing or does not use a List correctly. | /5 |
 | **Result Wrapper Usage** | `Result<T>` is correctly instantiated with a complex object and used for the final output. | `Result<T>` is created but not used according to the scenario. | `Result<T>` is missing or incorrectly implemented. | /5 |
 | **Main Simulation** | Both String and Complex Type repositories are tested and produce correct output. | Only one type of repository is tested, or output is messy. | The `Main` class does not compile or test the requirements. | /5 |
-| **Total** | | | | **/20** |
+| **Total** | | | | **20** |
